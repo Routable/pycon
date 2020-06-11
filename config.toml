@@ -1,0 +1,9 @@
+# Pyconnect Server configuration file. 
+
+title = "TOML Example"
+
+[server]
+host = "127.0.0.1"
+port = 1234
+threading = true
+max_threads = 1
