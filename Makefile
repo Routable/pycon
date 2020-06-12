@@ -9,13 +9,24 @@ define HEADER
 endef
 export HEADER
 
+
 header:
 	clear
 	@echo "$$HEADER"
 
 run: 
 	python3 setup.py
-	
+
 install:
-	source venv/bin/activate; \
-	pip3 install -r requirements.txt; \
+	pip3 install -r requirements.txt
+	
+venv: 
+	test -d venv || virtualenv -p python3 --no-site-packages venv
+	
+runtests:
+	python3 -m unittest discover
+
+clean:
+	rm -rf venv
+	find -iname "*.pyc" -delete
+	
