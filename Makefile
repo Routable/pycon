@@ -12,3 +12,10 @@ export HEADER
 header:
 	clear
 	@echo "$$HEADER"
+
+run: 
+	python3 setup.py
+	
+install:
+	source venv/bin/activate; \
+	pip3 install -r requirements.txt; \

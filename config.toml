@@ -1,9 +1,14 @@
 # Pyconnect Server configuration file. 
 
-title = "TOML Example"
+[app]
+environment = "development"
+debug = true
 
 [server]
 host = "127.0.0.1"
 port = 1234
 threading = true
 max_threads = 1
+
+[logs]
+logfile = "logs/logs.log"
