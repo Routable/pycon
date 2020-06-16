@@ -1,6 +1,6 @@
 import sys
-from lib.project import *
-from lib.options import *
+from app.project import *
+from app.options import *
 
 def run_project(args):
     options = Options()
