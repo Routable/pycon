@@ -15,7 +15,7 @@ header:
 	@echo "$$HEADER"
 
 run: 
-	python3 setup.py
+	python3 pycon/__main__.py
 
 install:
 	pip3 install -r requirements.txt
@@ -23,7 +23,7 @@ install:
 venv: 
 	test -d venv || virtualenv -p python3 --no-site-packages venv
 	
-runtests:
+test:
 	python3 -m unittest discover
 
 clean:
